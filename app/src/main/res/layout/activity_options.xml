@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter options symbol (e.g., BTC)"
+        android:padding="16dp"
+        android:layout_margin="8dp"/>
+
+    <Button
+        android:id="@+id/fetchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchEditText"
+        android:layout_alignParentEnd="true"
+        android:text="Fetch" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchEditText"
+        android:layout_alignParentEnd="true"
+        android:text="Back" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fetchButton"
+        android:layout_marginTop="16dp"/>
+
+    <com.github.mikephil.charting.charts.CandleStickChart
+        android:id="@+id/stockChart"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@id/recyclerView"
+        android:layout_marginTop="16dp"/>
+
+</RelativeLayout>

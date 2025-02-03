@@ -1,0 +1,37 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/btn_stocks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Stocks"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btn_crypto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cryptocurrencies"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btn_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Options"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btn_forex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Forex" />
+
+</LinearLayout>

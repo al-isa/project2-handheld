@@ -1,0 +1,116 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter forex symbol (e.g., EURUSD=X)"
+        android:padding="16dp"
+        android:layout_margin="8dp"/>
+
+    <Button
+        android:id="@+id/fetchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchEditText"
+        android:layout_alignParentEnd="true"
+        android:text="Fetch" />
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fetchButton"
+        android:layout_marginTop="16dp"/>
+
+    <com.github.mikephil.charting.charts.CandleStickChart
+        android:id="@+id/stockChart"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@id/recyclerView"
+        android:layout_marginTop="16dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/stockChart">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Performance Metrics -->
+            <TextView
+                android:id="@+id/weekHighLowTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="52W High/Low: "
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/dayHighLowTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Day High/Low: "
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/volumeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Volume: "
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/previousCloseTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Previous Close: "
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/changeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change: "
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/changePercentTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change Percentage: "
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/averageRangeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Avg Daily Range: "
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/averageVolumeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Avg Volume: "
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/priceVolumeRatioTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price/Volume Ratio: "
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
